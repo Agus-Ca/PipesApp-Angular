@@ -9,4 +9,6 @@ export class BasicosComponent {
 
   nombreCompleto:string = 'Agustin Casado';
 
+  fecha:Date = new Date();
+
 }
