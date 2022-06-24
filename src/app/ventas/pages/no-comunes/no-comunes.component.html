@@ -57,7 +57,7 @@
   </div>
 
   <div class="col md:col-6">
-    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
       <pre>{{ heroes | json }}</pre>
     </p-fieldset>
   </div>
@@ -73,12 +73,13 @@
   </div>
 
   <div class="col md:col-6">
-    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
-      <ul>
-        <li *ngFor="let item of persona | keyvalue">
-          <strong>{{ item.key | titlecase }}</strong>: {{ item.value }}
-        </li>
-      </ul>
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <strong>Observable:</strong>
+      <pre *ngIf="!(miObservable | async)">Resolviendo observable...</pre>
+      <pre>{{ miObservable | async }}</pre>
+      <strong>Promesa:</strong>
+      <pre *ngIf="!(miPromesa | async)">Resolviendo promesa...</pre>
+      <pre>{{ miPromesa | async }}</pre>
     </p-fieldset>
   </div>
 </div>
