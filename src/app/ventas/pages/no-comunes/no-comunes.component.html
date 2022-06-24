@@ -8,9 +8,18 @@
         <p-fieldset 
           legend="i18nSelect Pipe" 
           [toggleable]="true">
-            Saludos {{ nombre }}, es un placer
-            {{ genero | i18nSelect:invitacionMapa }}
-            a nuestro evento.
+            <p>
+                Saludos {{ nombre }}, es un placer
+                {{ genero | i18nSelect:invitacionMapa }}
+                a nuestro evento.
+            </p>
+            <button 
+              pButton pRipple 
+              type="button" 
+              label="Cambiar persona" 
+              class="p-button-help" 
+              icon="pi pi-user"
+              (click)="cambiarPersona()"></button>
         </p-fieldset>
     </div>
 
@@ -18,7 +27,16 @@
         <p-fieldset 
           legend="i18nPlural Pipe" 
           [toggleable]="true">
-            Content
+            <p>
+                Actualmente {{ clientes.length | i18nPlural:clientesMapa }} esperando.
+            </p>
+            <button 
+              pButton pRipple 
+              type="button" 
+              label="Borrar cliente" 
+              class="p-button-danger" 
+              icon="pi pi-trash"
+              (click)="borrarCliente()"></button>
         </p-fieldset>
     </div>
 </div>
