@@ -27,7 +27,7 @@ export class NoComunesComponent{
   }
 
   // * i18nPlural pipe
-  clientes:string[] = ['Maria', 'Pedro', 'Hernan', 'Eduardo'];
+  clientes:string[] = ['Maria', 'Pedro', 'Hernan', 'Eduardo', 'Francisco', 'Fabian'];
 
   clientesMapa = {
     '=0': 'no tenemos ningún cliente',
@@ -40,4 +40,27 @@ export class NoComunesComponent{
       this.clientes.shift();
     }
   }
+
+  // * KeyValue pipe
+  persona = {
+    nombre: 'Agustin',
+    edad: 25,
+    direccion: 'Mendoza, Argentina'
+  }
+
+  // * Json pipe
+  heroes = [
+    {
+      nombre: 'SuperMan',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: false
+    }
+  ]
 }
