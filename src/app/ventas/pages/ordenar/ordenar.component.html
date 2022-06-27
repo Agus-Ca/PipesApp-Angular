@@ -1,1 +1,13 @@
-<p>ordenar works!</p>
+<div class="text-layout">
+    <h1>Pipes personalizados</h1>
+    <p>
+        Pipes creados por {{ 'nosotros' | mayusculas:toMayus }}
+    </p>
+
+    <button pButton pRipple 
+    type="button" 
+    label="Alternar mayúsculas" 
+    class="p-button-info" 
+    icon="pi pi-trash"
+(click)="alternarMayus()"></button>
+</div>
