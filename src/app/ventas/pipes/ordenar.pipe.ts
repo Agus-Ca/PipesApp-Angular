@@ -6,7 +6,7 @@ import { Heroe } from '../interfaces/ventas.interfaces';
 })
 export class OrdenarPipe implements PipeTransform {
 
-  transform( heroes:Heroe[], ordenarPor: string = 'sin valor' ): Heroe[] {
+  transform( [...heroes]:Heroe[], ordenarPor: string = 'sin valor' ): Heroe[] {
 
     switch( ordenarPor ) {
       case 'nombre':
