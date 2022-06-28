@@ -44,5 +44,11 @@ export class OrdenarComponent {
       vuela: true,
       color: Color.verde
     }
-  ]
+  ];
+
+  ordenarPor:string = '';
+
+  cambiarOrden( orden:string ) {
+    this.ordenarPor = orden;
+  }
 }
